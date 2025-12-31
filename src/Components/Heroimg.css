@@ -1,0 +1,143 @@
+.mask{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+
+
+.mask::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.8;
+    
+}
+
+.into-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    position: relative;
+    background-repeat: no-repeat;
+   
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+
+}
+
+.hero .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* vertical + horizontal center */
+    text-align: center;
+    max-width: 100%;      /* prevents content from exceeding viewport */
+    padding: 0 1rem;      /* adds small space for small screens */
+}
+
+
+
+
+.hero .content h1{
+    font-size: 4rem;
+    padding: 0.6rem 0 1.5rem;
+
+}
+
+.hero .content p{
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-rendering: uppercase;
+
+
+}
+
+/* Flex container for buttons */
+.btn-container {
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    gap: 1rem;                  /* spacing between buttons */
+    flex-wrap: nowrap;          /* force row layout on large screens */
+}
+
+/* Buttons inside flex */
+.content .btn {
+    display: flex;              /* use flex for proper alignment */
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem;          
+    height: 50px;               
+    line-height: 50px;         
+    font-size: 1rem;           
+    text-decoration: none;      
+    color: black;               
+    border: 1px solid white;
+    border-radius: 1px;         
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* Light button variant */
+.content .btn-light {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Hover effect */
+.content .btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+
+.content .btn-light:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+/*responsiveneas*/
+
+@media (max-width:768px) {
+
+    
+
+.hero .content h1{
+    font-size: 3rem;
+    
+
+}
+
+.hero .content p{
+    font-size: 1.4rem;
+    
+
+
+}
+    
+}
